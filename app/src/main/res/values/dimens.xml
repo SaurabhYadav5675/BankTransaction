@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="elevation5dp">5dp</dimen>
+
+    <dimen name="size6dp">6dp</dimen>
+    <dimen name="size10dp">10dp</dimen>
+    <dimen name="size12dp">12dp</dimen>
+    <dimen name="size15dp">15dp</dimen>
+
+
+    <dimen name="txt12sp">12sp</dimen>
+    <dimen name="txt14sp">14sp</dimen>
+    <dimen name="txt16sp">16sp</dimen>
+    <dimen name="txt18sp">18sp</dimen>
+    <dimen name="size20dp">20dp</dimen>
+    <dimen name="size25dp">25dp</dimen>
+    <dimen name="size30dp">30dp</dimen>
+</resources>

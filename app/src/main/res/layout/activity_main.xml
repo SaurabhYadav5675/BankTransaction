@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offWhite"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:viewBindingIgnore="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/size20dp"
+        android:layout_marginTop="@dimen/size20dp"
+        android:layout_marginRight="@dimen/size20dp"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header_title"
+            layout="@layout/layout_transaction" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/withdrawContainer"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size10dp"
+            app:errorEnabled="true"
+            app:helperTextTextColor="@color/design_default_color_error"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/withdrawAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your withdraw amount"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnWithdraw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/size10dp"
+            android:gravity="center"
+            android:paddingLeft="@dimen/size30dp"
+            android:paddingTop="@dimen/size10dp"
+            android:paddingRight="@dimen/size30dp"
+            android:paddingBottom="@dimen/size10dp"
+            android:text="Withdraw"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt14sp"
+            app:cornerRadius="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size15dp"
+            android:text="Last Transactions"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt16sp"
+            android:textStyle="bold" />
+
+        <include
+            android:id="@+id/lastTransaction"
+            layout="@layout/layout_transaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size15dp"
+            android:text="Your Transactions"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt16sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardTransactions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="5dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size10dp"
+                android:layout_marginTop="@dimen/size10dp"
+                android:layout_marginRight="@dimen/size10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:text="ATM Amount"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.18"
+                        android:gravity="center"
+                        android:text="Rs. 100"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.18"
+                        android:gravity="center"
+                        android:text="Rs. 200"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.18"
+                        android:gravity="center"
+                        android:text="Rs. 500"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.18"
+                        android:gravity="center"
+                        android:text="Rs. 2000"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/listTransaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size6dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
